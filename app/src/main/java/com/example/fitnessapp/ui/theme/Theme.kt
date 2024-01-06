@@ -3,15 +3,17 @@ package com.example.fitnessapp.ui.theme
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Black,
+    primary = Gray,
     secondary = Navyblue,
     // Add other colors as needed for the dark color scheme
 )
@@ -35,6 +37,10 @@ fun FitnessappTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        content = content,
+        content = {
+            Surface(color = Color.Black) { // Set the default background color here
+                content()
+            }
+        },
     )
 }

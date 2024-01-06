@@ -15,3 +15,4 @@ val Pink40 = Color(0xFF7D5260)
 // my custom colors
 val Black = Color(0)
 val Navyblue = Color(0x0042E4)
+val Gray = Color(0xFF333333)
