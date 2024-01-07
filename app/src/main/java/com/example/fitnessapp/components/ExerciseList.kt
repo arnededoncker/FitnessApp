@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.fitnessapp.ui.theme.FitnessappTheme
@@ -18,11 +19,10 @@ import data.Exercise
 fun ExerciseList(exerciseList: List<Exercise>) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         items(exerciseList) { exercise ->
-            ExerciseCard(exercise.name, exercise.muscleGroup)
+            ExerciseCard(exercise.name.uppercase(), exercise.muscleGroup)
         }
     }
 }

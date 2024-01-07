@@ -25,7 +25,6 @@ import com.example.fitnessapp.ui.theme.FitnessappTheme
  */
 @Composable
 fun Searchbar() {
-    Spacer(modifier = Modifier.height(8.dp))
     Box(
         modifier = Modifier
             .fillMaxWidth()
