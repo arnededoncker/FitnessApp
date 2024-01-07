@@ -31,7 +31,7 @@ fun ExerciseCard(name: String, muscleGroup: String) {
             .background(MaterialTheme.colorScheme.primary),
     ) {
         Column(
-            modifier = Modifier.fillMaxSize().padding(all = 15.dp),
+            modifier = Modifier.fillMaxSize().padding(all = 16.dp),
         ) {
             Text(
                 text = "$name",

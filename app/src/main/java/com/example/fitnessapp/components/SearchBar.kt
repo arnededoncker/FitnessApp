@@ -10,14 +10,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.fitnessapp.R
 import com.example.fitnessapp.ui.theme.FitnessappTheme
 
 /**
@@ -38,19 +43,18 @@ fun Searchbar() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(
-                    start = 24.dp,
+                    start = 16.dp,
                     end = 16.dp,
                     top = 8.dp,
                     bottom = 8.dp,
                 ),
         ) {
-            Spacer(modifier = Modifier.weight(1f))
-            // Icon(
-            // painter = painterResource(id = R.drawable.search),
-            // contentDescription = "Search Icon",
-            // tint = Black,
-            // modifier = Modifier.size(16.dp),
-            // )
+            Icon(
+                painter = painterResource(id = R.drawable.search),
+                contentDescription = "Search Icon",
+                tint = White,
+                modifier = Modifier.size(24.dp),
+            )
         }
     }
 }
